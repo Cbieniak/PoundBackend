@@ -1,0 +1,15 @@
+<h1>Colors</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @colors.each do |color| %>
+    <tr>
+      <td><%= color.name %></td>
+      <td><%= color.value %></td>
+    </tr>
+  <% end %>
+</table>

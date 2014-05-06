@@ -1,2 +1,0 @@
-class ColorController < ApplicationController
-end

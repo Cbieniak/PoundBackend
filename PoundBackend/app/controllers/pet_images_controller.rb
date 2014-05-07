@@ -11,27 +11,22 @@ end
     @image = PetImage.find(params[:id])
   end
  
-  def new
-    @image = PetImage.new
-  end
- 
   def create
-    @image = PetImage.new(params[:image])
+
+    #create a new tempfile named fileupload
+    tempfile = Tempfile.new("fileupload")
+    tempfile.binmode
+    #get the file and decode it with base64 then write it to the tempfile
+    tempfile.write(Base64.decode64(picture_image_params[:image]))  	  
+  	  
+    @image = PetImage.new(params[pet_image_params])
+    @image.image_file_name = tempfile
     if @image.save
-      redirect_to @image
-    else
-      redirect_to pet_images_path
+      render json: @image
     end
   end
- 
-  def edit
-    @image = PetImage.find(params[:id])
-  end
- 
-  def update
-    @image = PetImage.find(params[:id])
-    if @image.update_attributes(params[:image])
-      redirect_to @image
-    end
+  
+  def pet_image_params
+	params.require(:pet_image).permit!
   end
 end

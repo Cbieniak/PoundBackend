@@ -1,4 +1,8 @@
 class Pet < ActiveRecord::Base
-	has_many :colors, :breeds
-	has_one :pet_location, :pet_image, :species
+	has_many :colors
+	has_many :breeds
+	belongs_to :pet_location
+	belongs_to :pet_image
+	belongs_to :species
+	
 end

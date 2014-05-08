@@ -4,5 +4,6 @@ class Pet < ActiveRecord::Base
 	belongs_to :pet_location
 	belongs_to :pet_image
 	belongs_to :species
+       serialize :breed_ids
 	
 end

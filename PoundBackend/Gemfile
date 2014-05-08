@@ -51,3 +51,6 @@ gem 'carrierwave'
 
 #Ransack (Searching)
 gem "ransack"
+
+#Amazon
+gem "aws-sdk"

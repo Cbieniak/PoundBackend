@@ -8,12 +8,12 @@ end
 def create
  @pet = Pet.create!(pet_params)
   if @pet.save
-    render json: @pet.id, root: false
+    render json: @pet, root: false
   end	
 end
 
 def pet_params
-	params.require(:pet).permit(:image_url, :thumb_url, :species_id, :breed_ids, :reward, :notes, :contact_name, :contact_detail, :contact_type, :name, :lost)
+	params.require(:pet).permit(:image_url, :thumb_url, :species_id, :breed_ids, :reward, :notes, :contact_name, :contact_detail, :contact_type, :name)
 end
 
 

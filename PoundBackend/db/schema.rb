@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140508013439) do
+ActiveRecord::Schema.define(version: 20140508054707) do
 
   create_table "breeds", force: true do |t|
     t.string   "name"
@@ -35,15 +35,8 @@ ActiveRecord::Schema.define(version: 20140508013439) do
     t.datetime "updated_at"
   end
 
-  create_table "pet_images", force: true do |t|
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "petId"
-  end
+# Could not dump table "pet_images" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "pet_locations", force: true do |t|
     t.string   "suburb"
@@ -67,6 +60,7 @@ ActiveRecord::Schema.define(version: 20140508013439) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+    t.string   "image"
   end
 
   create_table "species", force: true do |t|

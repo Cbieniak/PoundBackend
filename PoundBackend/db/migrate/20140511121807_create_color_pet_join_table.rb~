@@ -1,0 +1,4 @@
+class CreateColorPetJoinTable < ActiveRecord::Migration
+  def change
+  end
+end

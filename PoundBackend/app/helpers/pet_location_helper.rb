@@ -1,0 +1,2 @@
+module PetLocationHelper
+end

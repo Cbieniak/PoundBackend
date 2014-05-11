@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140508054707) do
+ActiveRecord::Schema.define(version: 20140511122634) do
 
   create_table "breeds", force: true do |t|
     t.string   "name"
@@ -25,6 +25,13 @@ ActiveRecord::Schema.define(version: 20140508054707) do
     t.string   "value"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "colors_pets", id: false, force: true do |t|
+    t.integer "pets_id"
+    t.integer "colors_id"
+    t.integer "pet_id"
+    t.integer "color_id"
   end
 
   create_table "contact_details", force: true do |t|
@@ -46,6 +53,9 @@ ActiveRecord::Schema.define(version: 20140508054707) do
     t.datetime "updated_at"
   end
 
+  create_table "pet_migrations", force: true do |t|
+  end
+
   create_table "pets", force: true do |t|
     t.string   "image_url"
     t.string   "thumb_url"
@@ -61,6 +71,12 @@ ActiveRecord::Schema.define(version: 20140508054707) do
     t.datetime "updated_at"
     t.string   "name"
     t.string   "image"
+    t.integer  "pet_location_id"
+  end
+
+  create_table "pets_colors", id: false, force: true do |t|
+    t.integer "pets_id"
+    t.integer "colors_id"
   end
 
   create_table "species", force: true do |t|

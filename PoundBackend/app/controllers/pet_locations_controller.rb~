@@ -1,0 +1,2 @@
+class PetLocationsController < ApplicationController
+end

@@ -1,10 +1,4 @@
 class PetSerializer < ActiveModel::Serializer
   embed :ids, :include => true
-  attributes :id, :name, :image_url, :thumb_url, :species_id, :breed_id, :reward, :notes, :contact_name, :contact_detail, :contact_type, :lost, :colors
-  has_one :pet_location
-  
-  #serialize :colors, Array
-  #has_many :colors
-  #has_and_belongs_to_many :colors
-
+  attributes :id, :name, :image_url, :thumb_url, :species_id, :breed_id, :reward, :notes, :contact_name, :contact_detail, :contact_type, :lost, :colors, :pet_location
 end

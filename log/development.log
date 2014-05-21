@@ -901,3 +901,186 @@ Migrating to AddColorIdToColorsPets (20140511122634)
   [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140511122634"]]
   [1m[35m (0.4ms)[0m  COMMIT
   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateAdminUsers (20140521122213)
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36m (35.1ms)[0m  [1mCREATE TABLE "admin_users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.6ms)[0m  CREATE UNIQUE INDEX "index_admin_users_on_email" ON "admin_users" ("email")
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "index_admin_users_on_reset_password_token" ON "admin_users" ("reset_password_token")[0m
+  [1m[35mAdminUser Exists (3.7ms)[0m  SELECT 1 AS one FROM "admin_users" WHERE "admin_users"."email" = 'admin@example.com' LIMIT 1
+  [1m[36mSQL (8.5ms)[0m  [1mINSERT INTO "admin_users" ("created_at", "email", "encrypted_password", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Wed, 21 May 2014 12:28:25 UTC +00:00], ["email", "admin@example.com"], ["encrypted_password", "$2a$10$urP0wa8M7dELNLhe5WAFHeZv3kLaZYd88xOegJLPSF55vjJttgLzC"], ["updated_at", Wed, 21 May 2014 12:28:25 UTC +00:00]]
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140521122213"]]
+  [1m[36m (3.2ms)[0m  [1mCOMMIT[0m
+Migrating to CreateActiveAdminComments (20140521122216)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (4.9ms)[0m  [1mCREATE TABLE "active_admin_comments" ("id" serial primary key, "namespace" character varying(255), "body" text, "resource_id" character varying(255) NOT NULL, "resource_type" character varying(255) NOT NULL, "author_id" integer, "author_type" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.1ms)[0m  CREATE INDEX "index_active_admin_comments_on_namespace" ON "active_admin_comments" ("namespace")
+  [1m[36m (1.1ms)[0m  [1mCREATE INDEX "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments" ("author_type", "author_id")[0m
+  [1m[35m (1.2ms)[0m  CREATE INDEX "index_active_admin_comments_on_resource_type_and_resource_id" ON "active_admin_comments" ("resource_type", "resource_id")
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140521122216"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/admin" for 127.0.0.1 at 2014-05-21 22:29:32 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 27ms
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2014-05-21 22:29:32 +1000
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/bundler/gems/active_admin-9c5c30431614/app/views/active_admin/devise/shared/_links.erb (1.4ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/bundler/gems/active_admin-9c5c30431614/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (67.5ms)
+Completed 200 OK in 4164ms (Views: 4146.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-05-21 22:29:37 +1000
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-05-21 22:29:37 +1000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-21 22:29:37 +1000
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-05-21 22:29:37 +1000
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-05-21 22:29:37 +1000
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-05-21 22:29:37 +1000
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2014-05-21 22:29:37 +1000
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-05-21 22:29:37 +1000
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2014-05-21 22:29:37 +1000
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-05-21 22:29:37 +1000
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2014-05-21 22:29:37 +1000
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2014-05-21 22:29:37 +1000
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-05-21 22:29:37 +1000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-21 22:29:37 +1000
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2014-05-21 22:29:37 +1000
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.0.0.1 at 2014-05-21 22:29:37 +1000
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-05-21 22:29:37 +1000
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.0.0.1 at 2014-05-21 22:29:37 +1000
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.0.0.1 at 2014-05-21 22:29:37 +1000
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.0.0.1 at 2014-05-21 22:29:37 +1000
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.0.0.1 at 2014-05-21 22:29:37 +1000
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-05-21 22:29:37 +1000
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.0.0.1 at 2014-05-21 22:29:37 +1000
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.0.0.1 at 2014-05-21 22:29:37 +1000
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.0.0.1 at 2014-05-21 22:29:37 +1000
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2014-05-21 22:29:37 +1000
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2014-05-21 22:30:02 +1000
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mwJTPpj16f1th6c1woaTT0wtKkyWHtps1iReOF8LxM0=", "admin_user"=>{"email"=>"user@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[35mAdminUser Load (2.1ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = 'user@example.com' ORDER BY "admin_users"."id" ASC LIMIT 1
+Completed 401 Unauthorized in 9ms
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mwJTPpj16f1th6c1woaTT0wtKkyWHtps1iReOF8LxM0=", "admin_user"=>{"email"=>"user@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/bundler/gems/active_admin-9c5c30431614/app/views/active_admin/devise/shared/_links.erb (0.5ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/bundler/gems/active_admin-9c5c30431614/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (17.3ms)
+Completed 200 OK in 109ms (Views: 31.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-21 22:30:02 +1000
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2014-05-21 22:30:15 +1000
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mwJTPpj16f1th6c1woaTT0wtKkyWHtps1iReOF8LxM0=", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (1.3ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = 'admin@example.com' ORDER BY "admin_users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (8.1ms)[0m  [1mUPDATE "admin_users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "admin_users"."id" = 1[0m  [["last_sign_in_at", Wed, 21 May 2014 12:30:15 UTC +00:00], ["current_sign_in_at", Wed, 21 May 2014 12:30:15 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Wed, 21 May 2014 12:30:15 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 105ms (ActiveRecord: 10.3ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2014-05-21 22:30:15 +1000
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.8ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 ORDER BY "admin_users"."id" ASC LIMIT 1[0m
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/bundler/gems/active_admin-9c5c30431614/app/views/active_admin/page/index.html.arb (19.0ms)
+Completed 200 OK in 27ms (Views: 21.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-21 22:30:15 +1000
+
+
+Started GET "/admin/admin_users" for 127.0.0.1 at 2014-05-21 22:30:19 +1000
+Processing by Admin::AdminUsersController#index as HTML
+  [1m[35mAdminUser Load (0.7ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 ORDER BY "admin_users"."id" ASC LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "admin_users" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "admin_users" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "admin_users"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "admin_users" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36mAdminUser Load (0.7ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" ORDER BY "admin_users"."id" desc LIMIT 30 OFFSET 0[0m
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/bundler/gems/active_admin-9c5c30431614/app/views/active_admin/resource/index.html.arb (71.5ms)
+Completed 200 OK in 86ms (Views: 73.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-21 22:30:19 +1000
+
+
+Started GET "/assets/active_admin/orderable.png" for 127.0.0.1 at 2014-05-21 22:30:19 +1000
+
+
+Started GET "/assets/active_admin/datepicker/datepicker-input-icon.png" for 127.0.0.1 at 2014-05-21 22:30:19 +1000
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2014-05-21 22:30:22 +1000
+Processing by Admin::DashboardController#index as HTML
+  [1m[35mAdminUser Load (0.6ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 1 ORDER BY "admin_users"."id" ASC LIMIT 1
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/bundler/gems/active_admin-9c5c30431614/app/views/active_admin/page/index.html.arb (18.9ms)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-05-21 22:30:22 +1000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-21 22:30:22 +1000
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2014-05-21 22:30:22 +1000

@@ -60,3 +60,9 @@ gem "fog", "~> 1.3.1"
 
 #Uploading to heroku
 gem 'rails_12factor', group: :production
+
+#Active Admin
+gem 'activeadmin', github: 'gregbell/active_admin'
+
+#Devise for users
+gem 'devise'

@@ -1,4 +1,6 @@
 PoundBackend::Application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   get "breeds/index"
   get "breed/index"
   get "species/index"

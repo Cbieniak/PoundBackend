@@ -47,7 +47,7 @@ class PetImageUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
-  include CarrierWave::MiniMagick
+
 
   include Sprockets::Helpers::RailsHelper
   include Sprockets::Helpers::IsolatedHelper
@@ -59,10 +59,6 @@ class PetImageUploader < CarrierWave::Uploader::Base
 
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
-  end
-
-  version :user_thumb do
-    process :resize_to_limit => [200, 200]
   end
 
   def extension_white_list

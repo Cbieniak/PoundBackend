@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140511122634) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "breeds", force: true do |t|
     t.string   "name"
     t.integer  "species_id"
@@ -42,8 +45,16 @@ ActiveRecord::Schema.define(version: 20140511122634) do
     t.datetime "updated_at"
   end
 
-# Could not dump table "pet_images" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "pet_images", force: true do |t|
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "pet_id"
+    t.binary   "image"
+  end
 
   create_table "pet_locations", force: true do |t|
     t.string   "suburb"
@@ -72,11 +83,6 @@ ActiveRecord::Schema.define(version: 20140511122634) do
     t.string   "name"
     t.string   "image"
     t.integer  "pet_location_id"
-  end
-
-  create_table "pets_colors", id: false, force: true do |t|
-    t.integer "pets_id"
-    t.integer "colors_id"
   end
 
   create_table "species", force: true do |t|

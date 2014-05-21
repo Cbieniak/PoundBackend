@@ -48,10 +48,6 @@ class PetImageUploader < CarrierWave::Uploader::Base
   #   "something.jpg" if original_filename
   # end
 
-
-  include Sprockets::Helpers::RailsHelper
-  include Sprockets::Helpers::IsolatedHelper
-
   storage :fog
 
   include CarrierWave::MimeTypes

@@ -2,7 +2,7 @@ class PetsController < ApplicationController
 protect_from_forgery :except => :create 
 wrap_parameters :pet, format: [:json]
 def index
-	@pets = Pet.all
+	@pets = Pet.order(:created_at)
 	render json: @pets, root: false
 end
 def create

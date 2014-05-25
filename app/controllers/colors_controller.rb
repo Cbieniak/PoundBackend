@@ -1,8 +1,6 @@
 class ColorsController < ApplicationController
-def index
-	@colors = Color.all
+  def index
+	@colors = Color.order(:name)
 	render json: @colors, root: false
-end
-	def new
-end
+  end
 end

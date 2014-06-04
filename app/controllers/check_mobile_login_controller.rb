@@ -1,9 +1,5 @@
-class ApplicationController < ActionController::Base
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
-  protect_from_forgery with: :exception
-
-def check_mobile_login
+class CheckMobileLoginController < ApplicationController
+  def check_mobile_login
     token = params[:token]
     format.json { render :json => token }
 
@@ -16,5 +12,5 @@ def check_mobile_login
         format.html # index.html.erb
         format.json { render :json => logged.authentication_token }
     end
-end
+  end
 end

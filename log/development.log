@@ -3824,3 +3824,1095 @@ Started GET "/pets.json" for 127.0.0.1 at 2014-05-25 13:40:01 +1000
 Processing by PetsController#index as JSON
   [1m[35mPet Load (2.6ms)[0m  SELECT "pets".* FROM "pets" ORDER BY "pets"."created_at" ASC
 Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/breeds.json" for 127.0.0.1 at 2014-06-03 06:44:30 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BreedsController#index as JSON
+  [1m[35mBreed Load (3.8ms)[0m  SELECT DISTINCT "breeds".* FROM "breeds" ORDER BY "breeds"."name" ASC
+Completed 200 OK in 50ms (Views: 11.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/check_mobile_login" for 127.0.0.1 at 2014-06-03 06:45:09 +1000
+
+ActionController::RoutingError (No route matches [GET] "/check_mobile_login"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.3ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.8ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (79.4ms)
+
+
+Started GET "/check_mobile_login?token=FB_MOBILE_TOKEN" for 127.0.0.1 at 2014-06-03 06:45:28 +1000
+
+ActionController::RoutingError (No route matches [GET] "/check_mobile_login"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (11.4ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (91.5ms)
+
+
+Started GET "/check_mobile_login?token=FB_MOBILE_TOKEN" for 127.0.0.1 at 2014-06-03 06:49:35 +1000
+
+ActionController::RoutingError (No route matches [GET] "/check_mobile_login"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (14.9ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (72.7ms)
+
+
+Started GET "/check_mobile_login?token=FB_MOBILE_TOKEN" for 127.0.0.1 at 2014-06-03 06:49:38 +1000
+
+ActionController::RoutingError (No route matches [GET] "/check_mobile_login"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.9ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (73.0ms)
+
+
+Started GET "/check_mobile_login?token=FB_MOBILE_TOKEN" for 127.0.0.1 at 2014-06-03 06:52:13 +1000
+
+ActionController::RoutingError (No route matches [GET] "/check_mobile_login"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (11.1ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (67.3ms)
+
+
+Started GET "/check_mobile_login?token=FB_MOBILE_TOKEN" for 127.0.0.1 at 2014-06-03 06:54:33 +1000
+
+ArgumentError (missing :controller):
+  config/routes.rb:8:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.2ms)
+
+
+Started GET "/check_mobile_login?token=FB_MOBILE_TOKEN" for 127.0.0.1 at 2014-06-03 07:06:02 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/check_mobile_login"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.1ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.5ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (81.2ms)
+
+
+Started GET "/check_mobile_login?token=FB_MOBILE_TOKEN" for 127.0.0.1 at 2014-06-03 07:09:01 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/check_mobile_login"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.2ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.9ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (79.1ms)
+
+
+Started GET "/check_mobile_login?token=FB_MOBILE_TOKEN" for 127.0.0.1 at 2014-06-03 07:09:05 +1000
+
+ActionController::RoutingError (No route matches [GET] "/check_mobile_login"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.5ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (62.4ms)
+
+
+Started GET "/check_mobile_login?token=FB_MOBILE_TOKEN" for 127.0.0.1 at 2014-06-03 07:09:50 +1000
+
+ActionController::RoutingError (No route matches [GET] "/check_mobile_login"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (12.6ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (93.9ms)
+
+
+Started GET "/check_mobile_login?token=FB_MOBILE_TOKEN" for 127.0.0.1 at 2014-06-03 07:09:51 +1000
+
+ActionController::RoutingError (No route matches [GET] "/check_mobile_login"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (16.5ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (70.8ms)
+
+
+Started GET "/check_mobile_login?token=FB_MOBILE_TOKEN" for 127.0.0.1 at 2014-06-03 07:10:47 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/check_mobile_login"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.4ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.5ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (78.5ms)
+
+
+Started GET "/check_mobile_login?token=FB_MOBILE_TOKEN" for 127.0.0.1 at 2014-06-03 07:11:11 +1000
+
+ActionController::RoutingError (No route matches [GET] "/check_mobile_login"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.5ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (69.9ms)
+
+
+Started GET "/check_mobile_login?token=FB_MOBILE_TOKEN" for 127.0.0.1 at 2014-06-03 07:13:58 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/check_mobile_login"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/gladys/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.2ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (9.1ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (83.7ms)
+
+
+Started GET "/facebook_logins/check_mobile_login?token=FB_MOBILE_TOKEN" for 127.0.0.1 at 2014-06-03 07:14:18 +1000
+Processing by FacebookLoginsController#check_mobile_login as HTML
+  Parameters: {"token"=>"FB_MOBILE_TOKEN"}
+Completed 500 Internal Server Error in 22ms
+
+ArgumentError (too few arguments):
+  app/controllers/facebook_logins_controller.rb:4:in `format'
+  app/controllers/facebook_logins_controller.rb:4:in `check_mobile_login'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.9ms)
+
+
+Started GET "/facebook_logins/check_mobile_login?token=FB_MOBILE_TOKEN" for 127.0.0.1 at 2014-06-03 08:12:59 +1000
+Processing by FacebookLoginsController#check_mobile_login as HTML
+  Parameters: {"token"=>"FB_MOBILE_TOKEN"}
+Completed 500 Internal Server Error in 1525ms
+
+FbGraph::InvalidToken (OAuthException :: Invalid OAuth access token.):
+  app/controllers/facebook_logins_controller.rb:5:in `check_mobile_login'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (66.8ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (91.1ms)
+
+
+Started GET "/facebook_logins/check_mobile_login?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-03 08:54:26 +1000
+Processing by FacebookLoginsController#check_mobile_login as HTML
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+Completed 500 Internal Server Error in 8099ms
+
+NameError (uninitialized constant FacebookLoginsController::User):
+  app/controllers/facebook_logins_controller.rb:7:in `check_mobile_login'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.7ms)
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20140602225746)
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36m (105.8ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (2.1ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (1.4ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (2.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140602225746"]]
+  [1m[36m (5.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/facebook_logins/check_mobile_login?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-03 08:59:11 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FacebookLoginsController#check_mobile_login as HTML
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+Completed 500 Internal Server Error in 964ms
+
+NoMethodError (undefined method `find_by_uid' for #<Class:0x00000102adfe78>):
+  app/controllers/facebook_logins_controller.rb:7:in `check_mobile_login'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.6ms)
+
+
+Started GET "/facebook_logins/check_mobile_login?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-03 09:07:56 +1000
+Processing by FacebookLoginsController#check_mobile_login as HTML
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+  [1m[35mUser Load (5.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "10203878669752601"]]
+PG::NumericValueOutOfRange: ERROR:  value "10203878669752601" is out of range for type integer
+: SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1
+Completed 500 Internal Server Error in 1426ms
+
+ActiveRecord::StatementInvalid (PG::NumericValueOutOfRange: ERROR:  value "10203878669752601" is out of range for type integer
+: SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1):
+  app/controllers/facebook_logins_controller.rb:7:in `check_mobile_login'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.7ms)
+
+
+Started GET "/facebook_logins/check_mobile_login?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-03 09:11:22 +1000
+Processing by FacebookLoginsController#check_mobile_login as HTML
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "10203878669752601"]]
+PG::NumericValueOutOfRange: ERROR:  value "10203878669752601" is out of range for type integer
+: SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1
+Completed 500 Internal Server Error in 3117ms
+
+ActiveRecord::StatementInvalid (PG::NumericValueOutOfRange: ERROR:  value "10203878669752601" is out of range for type integer
+: SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1):
+  app/controllers/facebook_logins_controller.rb:7:in `check_mobile_login'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.4ms)
+
+
+Started GET "/facebook_logins/check_mobile_login?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-03 09:12:13 +1000
+Processing by FacebookLoginsController#check_mobile_login as HTML
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+Completed 406 Not Acceptable in 1527ms
+
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  app/controllers/facebook_logins_controller.rb:6:in `check_mobile_login'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.2ms)
+
+
+Started GET "/facebook_logins/check_mobile_login?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-03 09:12:28 +1000
+Processing by FacebookLoginsController#check_mobile_login as HTML
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+Completed 406 Not Acceptable in 1980ms
+
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  app/controllers/facebook_logins_controller.rb:6:in `check_mobile_login'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.0ms)
+
+
+Started GET "/facebook_logins/check_mobile_login?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-03 09:12:45 +1000
+Processing by FacebookLoginsController#check_mobile_login as HTML
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+Completed 406 Not Acceptable in 1ms
+
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  app/controllers/facebook_logins_controller.rb:6:in `check_mobile_login'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.9ms)
+
+
+Started GET "/facebook_logins/check_mobile_login?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E.json" for 127.0.0.1 at 2014-06-03 09:13:05 +1000
+Processing by FacebookLoginsController#check_mobile_login as HTML
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E.json"}
+Completed 406 Not Acceptable in 1ms
+
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  app/controllers/facebook_logins_controller.rb:6:in `check_mobile_login'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.9ms)
+
+
+Started GET "/facebook_logins/check_mobile_login?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E.json" for 127.0.0.1 at 2014-06-03 09:13:11 +1000
+Processing by FacebookLoginsController#check_mobile_login as HTML
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E.json"}
+Completed 406 Not Acceptable in 1ms
+
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  app/controllers/facebook_logins_controller.rb:6:in `check_mobile_login'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.3ms)
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-03 09:13:29 +1000
+Processing by FacebookLoginsController#check_mobile_login as JSON
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-03 09:16:25 +1000
+Processing by FacebookLoginsController#check_mobile_login as JSON
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+Completed 200 OK in 1115ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddFacebookIdToUser (20140602232121)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (9.1ms)[0m  [1mALTER TABLE "users" ADD COLUMN "facebook_id" character varying(255)[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140602232121"]]
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-03 09:30:12 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FacebookLoginsController#check_mobile_login as JSON
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+  [1m[35mUser Load (6.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."facebook_id" = '10203878669752601' LIMIT 1
+Completed 500 Internal Server Error in 1290ms
+
+NoMethodError (undefined method `stringify_keys' for #<FbGraph::User:0x000001056a6ed0>):
+  app/controllers/facebook_logins_controller.rb:12:in `check_mobile_login'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.0ms)
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-03 09:30:56 +1000
+Processing by FacebookLoginsController#check_mobile_login as JSON
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."facebook_id" = '10203878669752601' LIMIT 1[0m
+Completed 500 Internal Server Error in 1740ms
+
+NoMethodError (undefined method `stringify_keys' for :user:Symbol):
+  app/controllers/facebook_logins_controller.rb:12:in `check_mobile_login'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.7ms)
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-03 09:31:09 +1000
+Processing by FacebookLoginsController#check_mobile_login as JSON
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."facebook_id" = '10203878669752601' LIMIT 1
+Completed 500 Internal Server Error in 2348ms
+
+NoMethodError (undefined method `stringify_keys' for #<FbGraph::User:0x000001056aac38>):
+  app/controllers/facebook_logins_controller.rb:12:in `check_mobile_login'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.3ms)
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-03 09:44:26 +1000
+Processing by FacebookLoginsController#check_mobile_login as JSON
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+Completed 200 OK in 1526ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-03 12:51:26 +1000
+Processing by FacebookLoginsController#check_mobile_login as JSON
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."facebook_id" = '10203878669752601' LIMIT 1[0m
+Completed 500 Internal Server Error in 1380ms
+
+NoMethodError (undefined method `stringify_keys' for #<FbGraph::User:0x000001019c1b00>):
+  app/controllers/facebook_logins_controller.rb:12:in `check_mobile_login'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.8ms)
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-03 12:57:26 +1000
+Processing by FacebookLoginsController#check_mobile_login as JSON
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."facebook_id" = '10203878669752601' LIMIT 1
+Completed 500 Internal Server Error in 862ms
+
+NoMethodError (undefined method `stringify_keys' for #<FbGraph::User:0x000001031f9df8>):
+  app/controllers/facebook_logins_controller.rb:12:in `check_mobile_login'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.6ms)
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-03 12:59:18 +1000
+Processing by FacebookLoginsController#check_mobile_login as JSON
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."facebook_id" = '10203878669752601' LIMIT 1[0m
+Completed 500 Internal Server Error in 920ms
+
+NoMethodError (undefined method `stringify_keys' for #<FbGraph::User:0x00000101963e60>):
+  app/controllers/facebook_logins_controller.rb:12:in `check_mobile_login'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.4ms)
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-03 13:00:09 +1000
+
+NameError (uninitialized constant Devise::Models::TokenAuthenticatable):
+  app/models/user.rb:4:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  config/routes.rb:2:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.3ms)
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-03 13:06:06 +1000
+Processing by FacebookLoginsController#check_mobile_login as JSON
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+  [1m[35mUser Load (1.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."facebook_id" = '10203878669752601' LIMIT 1
+Completed 500 Internal Server Error in 985ms
+
+NoMethodError (undefined method `stringify_keys' for #<FbGraph::User:0x00000101371868>):
+  app/controllers/facebook_logins_controller.rb:12:in `check_mobile_login'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.4ms)
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-03 23:50:11 +1000
+Processing by FacebookLoginsController#check_mobile_login as JSON
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."facebook_id" = '10203878669752601' LIMIT 1[0m
+Completed 500 Internal Server Error in 1758ms
+
+NoMethodError (undefined method `name=' for #<User:0x000001031d29b0>):
+  app/controllers/facebook_logins_controller.rb:15:in `check_mobile_login'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.2ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (36.1ms)
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-03 23:51:11 +1000
+Processing by FacebookLoginsController#check_mobile_login as JSON
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."facebook_id" = '10203878669752601' LIMIT 1
+  [1m[36m (2.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 880ms
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/facebook_logins_controller.rb:23:in `block (2 levels) in check_mobile_login'
+  app/controllers/facebook_logins_controller.rb:22:in `check_mobile_login'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.0ms)
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-03 23:51:27 +1000
+Processing by FacebookLoginsController#check_mobile_login as JSON
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."facebook_id" = '10203878669752601' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Completed 200 OK in 1007ms (Views: 4.2ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-03 23:52:48 +1000
+Processing by FacebookLoginsController#check_mobile_login as JSON
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."facebook_id" = '10203878669752601' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 200 OK in 980ms (Views: 1.8ms | ActiveRecord: 5.7ms)
+  [1m[36mUser Load (4.8ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users"
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-03 23:54:26 +1000
+Processing by FacebookLoginsController#check_mobile_login as JSON
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."facebook_id" = '10203878669752601' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Completed 200 OK in 934ms (Views: 1.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-03 23:55:02 +1000
+Processing by FacebookLoginsController#check_mobile_login as JSON
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Completed 200 OK in 1750ms (Views: 1.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-03 23:55:45 +1000
+Processing by FacebookLoginsController#check_mobile_login as JSON
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."facebook_id" = '10203878669752601' LIMIT 1
+Completed 500 Internal Server Error in 827ms
+
+NoMethodError (undefined method `name=' for #<User:0x00000109029e50>):
+  app/controllers/facebook_logins_controller.rb:15:in `check_mobile_login'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (32.6ms)
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-03 23:55:57 +1000
+Processing by FacebookLoginsController#check_mobile_login as JSON
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."facebook_id" = '10203878669752601' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 3176ms
+
+NoMethodError (undefined method `authentication_token' for #<User:0x00000109192b98>):
+  app/controllers/facebook_logins_controller.rb:23:in `block (2 levels) in check_mobile_login'
+  app/controllers/facebook_logins_controller.rb:22:in `check_mobile_login'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.5ms)
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-03 23:56:02 +1000
+Processing by FacebookLoginsController#check_mobile_login as JSON
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."facebook_id" = '10203878669752601' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 872ms
+
+NoMethodError (undefined method `authentication_token' for #<User:0x000001064e1450>):
+  app/controllers/facebook_logins_controller.rb:23:in `block (2 levels) in check_mobile_login'
+  app/controllers/facebook_logins_controller.rb:22:in `check_mobile_login'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAuthenticationTokenToUser (20140603140127)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (14.8ms)[0m  [1mALTER TABLE "users" ADD COLUMN "authentication_token" character varying(255)[0m
+  [1m[35mSQL (7.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140603140127"]]
+  [1m[36m (3.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-04 00:02:25 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FacebookLoginsController#check_mobile_login as JSON
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."facebook_id" = '10203878669752601' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+Completed 200 OK in 919ms (Views: 0.3ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-04 00:02:43 +1000
+Processing by FacebookLoginsController#check_mobile_login as JSON
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 200 OK in 912ms (Views: 0.2ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-04 00:02:48 +1000
+Processing by FacebookLoginsController#check_mobile_login as JSON
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 200 OK in 1385ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-04 00:04:26 +1000
+Processing by FacebookLoginsController#check_mobile_login as JSON
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."facebook_id" = '10203878669752601' LIMIT 1[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."authentication_token" = 'ecxw4jJNQtYrvrJEf784' ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 200 OK in 3192ms (Views: 0.2ms | ActiveRecord: 5.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddNameToUser (20140604003023)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.7ms)[0m  [1mALTER TABLE "users" ADD COLUMN "name" character varying(255)[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140604003023"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-04 10:30:53 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FacebookLoginsController#check_mobile_login as JSON
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."facebook_id" = '10203878669752601' LIMIT 1
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."authentication_token" = 'K1-p17bCuDqspe2djgb6' ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Completed 200 OK in 1517ms (Views: 0.2ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-04 10:50:58 +1000
+Processing by FacebookLoginsController#check_mobile_login as JSON
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."facebook_id" = '10203878669752601' LIMIT 1
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."authentication_token" = 'UkQp9arF7_2k98gNSKPt' ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+Completed 422 Unprocessable Entity in 1682ms
+
+ActiveRecord::RecordInvalid (Validation failed: Email can't be blank, Password can't be blank):
+  app/controllers/facebook_logins_controller.rb:17:in `check_mobile_login'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.6ms)
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-04 10:53:51 +1000
+Processing by FacebookLoginsController#check_mobile_login as JSON
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."facebook_id" = '10203878669752601' LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."authentication_token" = 'xAfyhJSyPzdzE8F_mtMz' ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Completed 422 Unprocessable Entity in 823ms
+
+ActiveRecord::RecordInvalid (Validation failed: Email can't be blank, Password can't be blank):
+  app/controllers/facebook_logins_controller.rb:17:in `check_mobile_login'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.0ms)
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-04 10:56:27 +1000
+
+RuntimeError (`attr_accessible` is extracted out of Rails into a gem. Please use new recommended protection model for params(strong_parameters) or add `protected_attributes` to your Gemfile to use old one.):
+  app/models/user.rb:6:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  config/routes.rb:2:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.6ms)
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-04 10:56:43 +1000
+Processing by FacebookLoginsController#check_mobile_login as JSON
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."facebook_id" = '10203878669752601' LIMIT 1
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."authentication_token" = 'qHr8vh5kDZroUUtMRZQ_' ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Completed 422 Unprocessable Entity in 832ms
+
+ActiveRecord::RecordInvalid (Validation failed: Email can't be blank, Password can't be blank):
+  app/controllers/facebook_logins_controller.rb:17:in `check_mobile_login'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.4ms)
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-04 10:57:42 +1000
+Processing by FacebookLoginsController#check_mobile_login as JSON
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."facebook_id" = '10203878669752601' LIMIT 1
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."authentication_token" = '1P4NRqNUsXwb8pMdE1mh' ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Completed 422 Unprocessable Entity in 821ms
+
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank):
+  app/controllers/facebook_logins_controller.rb:17:in `check_mobile_login'
+
+
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /Users/gladys/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.0ms)
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-04 10:57:59 +1000
+Processing by FacebookLoginsController#check_mobile_login as JSON
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."facebook_id" = '10203878669752601' LIMIT 1
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."authentication_token" = 'dLwRoofNfg8gJ4cfaenk' ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (16.1ms)[0m  [1mINSERT INTO "users" ("authentication_token", "created_at", "facebook_id", "name", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["authentication_token", "dLwRoofNfg8gJ4cfaenk"], ["created_at", Wed, 04 Jun 2014 00:58:01 UTC +00:00], ["facebook_id", "10203878669752601"], ["name", "Christian Bieniak"], ["updated_at", Wed, 04 Jun 2014 00:58:01 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Completed 200 OK in 826ms (Views: 0.1ms | ActiveRecord: 21.4ms)

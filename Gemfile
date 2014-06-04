@@ -66,3 +66,8 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 
 #Devise for users
 gem 'devise'
+
+#Facebook gem for users
+gem 'fb_graph'
+
+

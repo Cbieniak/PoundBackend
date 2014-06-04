@@ -1,10 +1,12 @@
 PoundBackend::Application.routes.draw do
+  devise_for :users
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   get "breeds/index"
   get "breed/index"
   get "species/index"
   get "welcome/index"
+  get "facebook_logins/check_mobile_login" 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   resources :colors,:contact_details,:pet_locations,:species,:breeds,:pets, :pet_images

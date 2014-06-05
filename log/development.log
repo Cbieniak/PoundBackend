@@ -4916,3 +4916,25 @@ Processing by FacebookLoginsController#check_mobile_login as JSON
   [1m[36mSQL (16.1ms)[0m  [1mINSERT INTO "users" ("authentication_token", "created_at", "facebook_id", "name", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["authentication_token", "dLwRoofNfg8gJ4cfaenk"], ["created_at", Wed, 04 Jun 2014 00:58:01 UTC +00:00], ["facebook_id", "10203878669752601"], ["name", "Christian Bieniak"], ["updated_at", Wed, 04 Jun 2014 00:58:01 UTC +00:00]]
   [1m[35m (0.5ms)[0m  COMMIT
 Completed 200 OK in 826ms (Views: 0.1ms | ActiveRecord: 21.4ms)
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-04 11:03:41 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FacebookLoginsController#check_mobile_login as JSON
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+  [1m[35mUser Load (2.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."facebook_id" = '10203878669752601' LIMIT 1
+Completed 200 OK in 1303ms (Views: 0.2ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-04 11:03:44 +1000
+Processing by FacebookLoginsController#check_mobile_login as JSON
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."facebook_id" = '10203878669752601' LIMIT 1[0m
+Completed 200 OK in 812ms (Views: 0.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/facebook_logins/check_mobile_login.json?token=CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E" for 127.0.0.1 at 2014-06-04 11:03:47 +1000
+Processing by FacebookLoginsController#check_mobile_login as JSON
+  Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."facebook_id" = '10203878669752601' LIMIT 1
+Completed 200 OK in 920ms (Views: 0.1ms | ActiveRecord: 1.3ms)

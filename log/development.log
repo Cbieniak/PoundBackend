@@ -4938,3 +4938,168 @@ Processing by FacebookLoginsController#check_mobile_login as JSON
   Parameters: {"token"=>"CAAI1ZAvURnksBACHJLHG4ZC6M36Bf7dShZCy3xZCU5XN72xQZBX9KznbIuqFV2mTf14beVu2iz247eyfrsipaJ2cRGRLsZALbtDgExmZBRX5KcoVU4XXvSrzFeIeq3brxzksfLWlMJ38lrr7PgaiMzZBz2XZBmfyCgKiLNaNXWCP784mZCDE3yEK4E"}
   [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."facebook_id" = '10203878669752601' LIMIT 1
 Completed 200 OK in 920ms (Views: 0.1ms | ActiveRecord: 1.3ms)
+  [1m[36m (28.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (6.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSpecies (20140501093120)
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36m (24.7ms)[0m  [1mCREATE TABLE "species" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (7.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140501093120"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+Migrating to CreateBreeds (20140501093430)
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36m (3.6ms)[0m  [1mCREATE TABLE "breeds" ("id" serial primary key, "name" character varying(255), "species_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140501093430"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePetLocations (20140501093524)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (2.8ms)[0m  [1mCREATE TABLE "pet_locations" ("id" serial primary key, "suburb" character varying(255), "latitude" float, "longitude" float, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140501093524"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateContactDetails (20140501101635)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (3.3ms)[0m  [1mCREATE TABLE "contact_details" ("id" serial primary key, "type" integer, "detail" character varying(255), "pet_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140501101635"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateColors (20140501102020)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (5.7ms)[0m  [1mCREATE TABLE "colors" ("id" serial primary key, "name" character varying(255), "value" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140501102020"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePets (20140501114834)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (6.4ms)[0m  [1mCREATE TABLE "pets" ("id" serial primary key, "image_url" character varying(255), "thumb_url" character varying(255), "species_id" integer, "breed_id" integer, "reward" integer, "notes" text, "contact_name" character varying(255), "contact_detail" character varying(255), "contact_type" integer, "lost" boolean, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140501114834"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Migrating to AddNameToPets (20140501121816)
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (5.0ms)[0m  [1mALTER TABLE "pets" ADD COLUMN "name" character varying(255)[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140501121816"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePetImages (20140503031418)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (4.3ms)[0m  [1mCREATE TABLE "pet_images" ("id" serial primary key, "image_file_name" character varying(255), "image_content_type" character varying(255), "image_file_size" integer, "image_updated_at" timestamp, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140503031418"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to AddPetIdToPetImage (20140503032037)
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "pet_images" ADD COLUMN "petId" integer[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140503032037"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to AddBreedIdsToPet (20140508013041)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140508013041"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to RemoveBreedIdFromPet (20140508013439)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140508013439"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to AddImageToPet (20140508044732)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "pets" ADD COLUMN "image" character varying(255)[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140508044732"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to RemovePetIdFromPetImages (20140508054400)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (4.1ms)[0m  [1mALTER TABLE "pet_images" DROP "petId"[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140508054400"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to AddPetIdToPetImages (20140508054518)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "pet_images" ADD COLUMN "pet_id" character varying(255)[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140508054518"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to AddImageToPetImages (20140508054707)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "pet_images" ADD COLUMN "image" bytea[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140508054707"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to AddPetLocationIdToPet (20140511025546)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "pets" ADD COLUMN "pet_location_id" integer[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140511025546"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePetMigration (20140511101620)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.6ms)[0m  [1mCREATE TABLE "pet_migrations" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140511101620"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePetColorJoinTable (20140511105655)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "colors_pets" ("pets_id" integer, "colors_id" integer) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140511105655"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateColorPetJoinTable (20140511121807)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140511121807"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to AddPetIdToColorsPets (20140511122244)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "colors_pets" ADD COLUMN "pet_id" integer
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140511122244"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to AddColorIdToColorsPets (20140511122634)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "colors_pets" ADD COLUMN "color_id" integer
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140511122634"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to DeviseCreateAdminUsers (20140521122213)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (6.7ms)[0m  CREATE TABLE "admin_users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (2.2ms)[0m  [1mCREATE UNIQUE INDEX "index_admin_users_on_email" ON "admin_users" ("email")[0m
+  [1m[35m (1.6ms)[0m  CREATE UNIQUE INDEX "index_admin_users_on_reset_password_token" ON "admin_users" ("reset_password_token")
+  [1m[36mAdminUser Exists (3.6ms)[0m  [1mSELECT 1 AS one FROM "admin_users" WHERE "admin_users"."email" = 'admin@example.com' LIMIT 1[0m
+  [1m[35mAdminUser Exists (0.5ms)[0m  SELECT 1 AS one FROM "admin_users" WHERE "admin_users"."email" = 'admin@example.com' LIMIT 1
+  [1m[36mSQL (5.3ms)[0m  [1mINSERT INTO "admin_users" ("created_at", "email", "encrypted_password", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 06 Jun 2014 05:21:47 UTC +00:00], ["email", "admin@example.com"], ["encrypted_password", "$2a$10$oAy3Uuk6gY9mp6DRgKORR.jaRWLCHF3VYs4L.8nA3B7DvNg5TeUJG"], ["updated_at", Fri, 06 Jun 2014 05:21:47 UTC +00:00]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140521122213"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateActiveAdminComments (20140521122216)
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (4.3ms)[0m  [1mCREATE TABLE "active_admin_comments" ("id" serial primary key, "namespace" character varying(255), "body" text, "resource_id" character varying(255) NOT NULL, "resource_type" character varying(255) NOT NULL, "author_id" integer, "author_type" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.0ms)[0m  CREATE INDEX "index_active_admin_comments_on_namespace" ON "active_admin_comments" ("namespace")
+  [1m[36m (1.1ms)[0m  [1mCREATE INDEX "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments" ("author_type", "author_id")[0m
+  [1m[35m (1.5ms)[0m  CREATE INDEX "index_active_admin_comments_on_resource_type_and_resource_id" ON "active_admin_comments" ("resource_type", "resource_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140521122216"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to AddDeviseToAdminUsers (20140523084756)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140523084756"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to DeviseCreateUsers (20140602225746)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (6.1ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140602225746"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to AddFacebookIdToUser (20140602232121)
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD COLUMN "facebook_id" character varying(255)[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140602232121"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to AddAuthenticationTokenToUser (20140603140127)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ADD COLUMN "authentication_token" character varying(255)[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140603140127"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to AddNameToUser (20140604003023)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD COLUMN "name" character varying(255)[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140604003023"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/pets.json" for 127.0.0.1 at 2014-06-06 17:28:18 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PetsController#index as JSON
+  [1m[35mPet Load (4.3ms)[0m  SELECT "pets".* FROM "pets" ORDER BY "pets"."created_at" ASC
+Completed 200 OK in 24ms (Views: 6.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/breeds.json" for 127.0.0.1 at 2014-06-06 17:28:29 +1000
+Processing by BreedsController#index as JSON
+  [1m[36mBreed Load (2.6ms)[0m  [1mSELECT DISTINCT "breeds".* FROM "breeds" ORDER BY "breeds"."name" ASC[0m
+Completed 200 OK in 8ms (Views: 1.8ms | ActiveRecord: 2.6ms)

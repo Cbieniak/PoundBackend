@@ -5,6 +5,11 @@ def index
 	@pets = Pet.order(:created_at)
 	render json: @pets, root: false
 end
+
+def show
+	@pet = Pet.find(params)
+	render json: @pet, root: false
+end
 def create
 
  @pet = Pet.create!(pet_params)

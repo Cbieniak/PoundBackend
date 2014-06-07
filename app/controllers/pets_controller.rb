@@ -22,7 +22,7 @@ end
 
 def destroy
 	if (user_signed_in?)
-		@pet = Pet.find(id)
+		@pet = Pet.find(params[:id])
 		if(pet.creator.equals current_user.id)
 			@pet.delete!
 		end

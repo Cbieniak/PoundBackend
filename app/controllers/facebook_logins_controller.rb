@@ -17,11 +17,8 @@ class FacebookLoginsController < ApplicationController
       @user.save!
       logged = @user
     end
-
-    
-
     respond_to do |format|
-        format.json { render :json => logged.authentication_token }
+        format.json { render :json => logged }
     end
   end
 end

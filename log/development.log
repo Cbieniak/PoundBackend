@@ -5103,3 +5103,10 @@ Started GET "/breeds.json" for 127.0.0.1 at 2014-06-06 17:28:29 +1000
 Processing by BreedsController#index as JSON
   [1m[36mBreed Load (2.6ms)[0m  [1mSELECT DISTINCT "breeds".* FROM "breeds" ORDER BY "breeds"."name" ASC[0m
 Completed 200 OK in 8ms (Views: 1.8ms | ActiveRecord: 2.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddCreatorToPets (20140607053723)
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (13.0ms)[0m  [1mALTER TABLE "pets" ADD COLUMN "creator" character varying(255)[0m
+  [1m[35mSQL (2.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140607053723"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.8ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"

@@ -18,7 +18,7 @@ end
 def delete
 	if (user_signed_in?)
 		@pet = Pet.find(id)
-		if(pet.owner_id.equals current_user.id)
+		if(pet.creator.equals current_user.id)
 			@pet.delete!
 		end
 	end
@@ -26,7 +26,7 @@ end
 
 def pet_params
 	#params.require(:pet).permit!
-	params.require(:pet).permit(:image_url, :thumb_url, :species_id, :breed_id, :reward, :notes, :contact_name, :contact_detail, :contact_type, :name, :lost, :color_ids, :colors, :pet_location)
+	params.require(:pet).permit(:image_url, :thumb_url, :species_id, :breed_id, :reward, :notes, :contact_name, :contact_detail, :contact_type, :name, :lost, :color_ids, :colors, :pet_location, :creator)
 end
 
 def pet_location_params

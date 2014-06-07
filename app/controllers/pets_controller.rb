@@ -15,7 +15,7 @@ def create
   end	
 end
 
-def delete
+def destroy
 	if (user_signed_in?)
 		@pet = Pet.find(id)
 		if(pet.creator.equals current_user.id)

@@ -31,7 +31,7 @@ def destroy
 		puts @pet.creator
 		if(@pet.creator.to_i == @user.id)
 			puts "If we got here thats cool"
-			if @pet.delete!
+			if @pet.destroy!
         		render :json => '{worked: "YEAH"}'
         	else
         		render :json => '{error: "Deletion Failed"}'

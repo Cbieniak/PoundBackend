@@ -1,6 +1,6 @@
 class PetsController < ApplicationController
 protect_from_forgery :except => :create
-skip_before_action :verify_authenticity_token, if: :json_request? 
+skip_before_action :verify_authenticity_token, if: :destroy
 wrap_parameters :pet, format: [:json]
 def index
 	@pets = Pet.order(:created_at)

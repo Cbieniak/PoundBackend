@@ -23,8 +23,9 @@ def create
 end
 
 def destroy
-	@user = User.where(:authentication_token => params[:auth_token]).first 
-	if(!@user.nil)
+	@user = User.where(:authentication_token => params[:auth_token]).first
+	puts @user.name 
+	if(@user)
 		@pet = Pet.find(params[:id])
 		if(@pet.creator == @user.id)
 			if @pet.delete!

@@ -27,15 +27,15 @@ def destroy
 		@pet = Pet.find(params[:id])
 		if(pet.creator.equals current_user.id)
 			if @pet.delete!
-        		format.json { render :json => '{worked: "YEAH"}' }
+        		render :json => '{worked: "YEAH"}'
         	else
-        		format.json { render :json => '{error: "Deletion Failed"}' }
+        		render :json => '{error: "Deletion Failed"}'
         	end
 		else
-        	format.json { render :json => '{error: "You are not the owner"}' }
+        	render :json => '{error: "You are not the owner"}'
 		end
 	else
-		format.json {render :json => '{error: "Not Signed in"}'}
+		render :json => '{error: "Not Signed in"}' 
 	end
 end
 

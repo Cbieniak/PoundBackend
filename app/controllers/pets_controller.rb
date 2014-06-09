@@ -25,6 +25,13 @@ def destroy
 		@pet = Pet.find(params[:id])
 		if(pet.creator.equals current_user.id)
 			@pet.delete!
+			respond_to do |format|
+        		format.json { render :json => "success" }
+    		end
+		else
+			respond_to do |format|
+        		format.json { render :json => "failed hard" }
+    		end
 		end
 	end
 end

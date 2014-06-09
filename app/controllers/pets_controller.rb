@@ -24,7 +24,7 @@ end
 
 def destroy
 	@user = User.where(:authentication_token => params[:auth_token]) 
-	if(@user)
+	if(!@user.nil)
 		@pet = Pet.find(params[:id])
 		if(@pet.creator == @user.id)
 			if @pet.delete!
@@ -33,9 +33,11 @@ def destroy
         		render :json => '{error: "Deletion Failed"}'
         	end
 		else
+			puts "NOT OWNER DOE"
         	render :json => '{error: "You are not the owner"}'
 		end
 	else
+		puts "USER DOE"
 		render :json => '{error: "Not Signed in"}' 
 	end
 end

@@ -29,7 +29,7 @@ def destroy
 	if(@user)
 		@pet = Pet.find(params[:id])
 		puts @pet.creator
-		if(@pet.creator.equals @user.id)
+		if(@pet.creator == @user.id)
 			puts "If we got here thats cool"
 			if @pet.delete!
         		render :json => '{worked: "YEAH"}'
@@ -37,7 +37,7 @@ def destroy
         		render :json => '{error: "Deletion Failed"}'
         	end
 		else
-			puts @pet.creator.equals @user.id
+			puts @pet.creator == @user.id
         	render :json => '{error: "You are not the owner"}'
 		end
 	else

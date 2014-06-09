@@ -5271,3 +5271,4 @@ ActionView::MissingTemplate (Missing template pets/destroy, application/destroy 
 
   Rendered /Users/Christian/.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.7ms)
   [1m[36mUser Load (6.5ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1[0m

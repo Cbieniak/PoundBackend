@@ -30,6 +30,7 @@ def destroy
 		@pet = Pet.find(params[:id])
 		puts @pet.creator
 		if(@pet.creator == @user.id)
+			puts "If we got here thats cool"
 			if @pet.delete!
         		render :json => '{worked: "YEAH"}'
         	else

@@ -24,7 +24,8 @@ end
 
 def destroy
 	@user = User.where(:authentication_token => params[:auth_token]).first
-	puts @user.name 
+	puts "FUCK YEAH ID"
+	puts @user.id 
 	if(@user)
 		@pet = Pet.find(params[:id])
 		if(@pet.creator == @user.id)

@@ -24,24 +24,18 @@ end
 
 def destroy
 	@user = User.where(:authentication_token => params[:auth_token]).first
-	puts "FUCK YEAH ID"
-	puts @user.id 
 	if(@user)
 		@pet = Pet.find(params[:id])
-		puts @pet.creator
 		if(@pet.creator.to_i == @user.id)
-			puts "If we got here thats cool"
 			if @pet.destroy!
         		render :json => '{worked: "YEAH"}'
         	else
         		render :json => '{error: "Deletion Failed"}'
         	end
 		else
-			puts @pet.creator == @user.id
         	render :json => '{error: "You are not the owner"}'
 		end
 	else
-		puts "USER DOE"
 		render :json => '{error: "Not Signed in"}' 
 	end
 end

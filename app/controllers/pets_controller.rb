@@ -26,7 +26,7 @@ def destroy
 	@user = User.where(:auth_token => params[:auth_token]) 
 	if(@user)
 		@pet = Pet.find(params[:id])
-		if(pet.creator.equals @user.id)
+		if(@pet.creator.equals @user.id)
 			if @pet.delete!
         		render :json => '{worked: "YEAH"}'
         	else

@@ -16,8 +16,8 @@ class FacebookLoginsController < ApplicationController
       @user.name = user.name
       @user.save!
       logged = @user
-      sign_in(:user, logged)
     end
+    sign_in(:user, logged)
     respond_to do |format|
         format.json { render :json => logged }
     end

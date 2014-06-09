@@ -34,6 +34,8 @@ def destroy
 		else
         	format.json { render :json => '{error: "You are not the owner"}' }
 		end
+	else
+		format.json {render :json => '{error: "Not Signed in"}'}
 	end
 end
 

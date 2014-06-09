@@ -26,11 +26,11 @@ def destroy
 		if(pet.creator.equals current_user.id)
 			@pet.delete!
 			respond_to do |format|
-        		format.json { render :json => "success" }
+        		format.json { render :json => '{worked: "YEAH"}' }
     		end
 		else
 			respond_to do |format|
-        		format.json { render :json => "failed hard" }
+        		format.json { render :json => '{worked: "Nah"}' }
     		end
 		end
 	end

@@ -7,9 +7,8 @@ class CheckMobileLoginController < ApplicationController
     user = user.fetch
 
     logged = User.find_by_uid(user.identifier)
-
+    sign_in(:user, user)
     respond_to do |format|
-        format.html # index.html.erb
         format.json { render :json => logged.authentication_token }
     end
   end

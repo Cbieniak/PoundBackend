@@ -4,6 +4,7 @@ wrap_parameters :pet, format: [:json]
 def index
 	@pets = Pet.order(:created_at)
 	render json: @pets, root: false
+	
 end
 
 def show
@@ -24,14 +25,13 @@ def destroy
 	if (user_signed_in?)
 		@pet = Pet.find(params[:id])
 		if(pet.creator.equals current_user.id)
-			@pet.delete!
-			respond_to do |format|
+			if @pet.delete!
         		format.json { render :json => '{worked: "YEAH"}' }
-    		end
+        	else
+        		format.json { render :json => '{error: "Deletion Failed"}' }
+        	end
 		else
-			respond_to do |format|
-        		format.json { render :json => '{worked: "Nah"}' }
-    		end
+        	format.json { render :json => '{error: "You are not the owner"}' }
 		end
 	end
 end
